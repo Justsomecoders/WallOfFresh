@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <link rel="stylesheet" href="omakoodi10.css">
     <script>
@@ -11,19 +11,32 @@
         sound.src = 'flash.mp3'
         sound.type = 'audio/mp3'
         document.head.appendChild(sound)
-
         function playAudio() {
         document.getElementById('audio').play();
         }
-
         setTimeout("playAudio()", 3000);
     </script>
 </head>
 <nav><a href="https://wallofflesh.xyz/"><button>Wall of fresh</button></a></nav>
 <body>
-    <h1>HElLO</h1>
+    <h1>Scroll down for a secret</h1>
 
+    <script>
 
-    
+        function populate() {
+        while(true) {
+            // document bottom
+            let windowRelativeBottom = document.documentElement.getBoundingClientRect().bottom;
+
+            // if the user hasn't scrolled far enough (>100px to the end)
+            if (windowRelativeBottom > document.documentElement.clientHeight + 100) break;
+
+            // let's add more data
+            document.body.insertAdjacentHTML("beforeend", `<p>Date: ${new Date()}</p>`);
+        }
+        }
+
+    </script>
+</div>
 </body>
 </html>
