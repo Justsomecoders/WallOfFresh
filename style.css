@@ -1,0 +1,11 @@
+@font-face {
+        font-family: determination;
+        src: url(sans.otf);
+        }
+
+body {
+    background-color: black;
+    font-family: determination;
+    color: white;
+    
+}
