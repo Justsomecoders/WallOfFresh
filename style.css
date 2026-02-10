@@ -8,5 +8,12 @@ body {
     font-family: determination;
     color: white;
     text-align: center;
+    align-items: center;
+    align-content: center;
     
+}
+
+img {
+    margin-top: 20px;
+    align-self: center;
 }
