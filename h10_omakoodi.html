@@ -5,9 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="omakoodi10.css">
-    <audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 5000)">
-    <source src="flash.mp3" type="audio/mp3" />
-    </audio>
+    <script>
+        var sound = document.createElement('audio')
+        sound.id = 'audio'
+        sound.src = 'flash.mp3'
+        sound.type = 'audio/mp3'
+        document.body.appendChild(sound)
+
+        function playAudio() {
+        document.getElementById('audio').play();
+        }
+
+        setTimeout("playAudio()", 3000);
+    </script>
 </head>
 <nav><button>HELLO</button></nav>
 <body>
