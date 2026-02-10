@@ -1,0 +1,26 @@
+@font-face {
+    font-family: determination;
+    src: url(sans.otf);
+}
+
+
+
+@keyframes anim1 {
+    from {color: rgb(255, 255, 255); background:rgb(255, 255, 255); filter: blur(10px);}
+    75% {color: rgb(255, 192, 192); background:rgb(175, 175, 175); filter: blur(7px);}
+    to {color: rgb(255, 255, 255); background:rgb(0, 0, 0); filter: blur(0px);}
+}
+
+body {
+    font-family: determination;
+    color: white;
+    background: black;
+    animation-delay: 5s;
+    animation-name: anim1;
+    animation-duration: 10s;
+
+
+}
+
+
+
