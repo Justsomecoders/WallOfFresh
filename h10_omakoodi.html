@@ -6,24 +6,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="omakoodi10.css">
     <script>
-          function sleep(milliseconds) {
-          var start = new Date().getTime();
-          for (var i = 0; i < 1e7; i++) {
-            if ((new Date().getTime() - start) > milliseconds){
-              break;
-            }
-          }
-        }
         var sound = document.createElement('audio')
         sound.id = 'audio'
         sound.src = 'flash.mp3'
         sound.type = 'audio/mp3'
         document.head.appendChild(sound)
         function playAudio() {
-        while (true){
         document.getElementById('audio').play();
-        sleep(100);
-        }}
+        }
         setTimeout("playAudio()", 2700);
     </script>
 </head>
@@ -34,6 +24,7 @@
 </body>
 
 </html>
+
 
 
 
