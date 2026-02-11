@@ -14,17 +14,46 @@
         function playAudio() {
         document.getElementById('audio').play();
         }
-        setTimeout("playAudio()", 2700);
+        setTimeout("playAudio()", 30000);
     </script>
 </head>
-<nav><a href="https://wallofflesh.xyz/"><button>Wall of fresh</button></a></nav>
+<nav><a href="https://wallofflesh.xyz/"><button class="button1">Wall of fresh</button></a>
+<a href="something"><button class="button1">another site</button></a>
+<a href="something"><button class="button1">third site</button></a></nav>
 <body>
-    <h1>Scroll down for a secret</h1>
-</div>
+    <div class="back"><h1><span class="back">Is this what you can call a responsive website <br>
+    because this can flashbang you.</span></h1></div>
+
+    <form id="encodeForm">
+    <label for="textInput">Enter text:</label><br><br>
+    <input type="text" id="textInput" name="textInput" size="10">
+    <button class="button2" type="submit">Encode</button>
+    </form>
+
+    <p>Encoded Result:</p>
+    <p id="result"></p>
+
+    <script>
+    function scrambleText(text) {
+
+      const chars = text.split('');
+
+      for (let i = chars.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [chars[i], chars[j]] = [chars[j], chars[i]];
+      }
+      return chars.join('');
+    }
+
+    document.getElementById("encodeForm").addEventListener("submit", function(event) {
+      event.preventDefault(); 
+      
+      const inputText = document.getElementById("textInput").value;
+      const scrambled = scrambleText(inputText);
+      
+      document.getElementById("result").textContent = scrambled;
+    });
+  </script>
+
 </body>
-
 </html>
-
-
-
-
